@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DataExchangeService} from '../../Servises/data-exchange.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PhoneBook';
+  getPage(){
+   return  DataExchangeService.getPage();
+  }
 }

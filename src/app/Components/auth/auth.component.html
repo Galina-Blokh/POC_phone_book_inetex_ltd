@@ -1,0 +1,21 @@
+<form [formGroup]="authFG" (submit)="authSubmit()">
+
+<mat-form-field>
+  <mat-label>Login: </mat-label>
+  <input matInput
+         [formControl]="loginFC"
+         placeholder="input login"
+         required/>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Password: </mat-label>
+  <input matInput
+         [formControl]="passwordFC"
+         placeholder="input password"
+         required/>
+</mat-form-field>
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+  <button type="reset" mat-raised-button color="primary">Reset</button>
+
+</form>
