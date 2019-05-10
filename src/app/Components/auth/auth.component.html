@@ -6,6 +6,8 @@
          [formControl]="loginFC"
          placeholder="input login"
          required/>
+  <mat-hint>valid e-mail</mat-hint>
+  <mat-error>{{getLoginError()}}</mat-error>
 </mat-form-field>
 
 <mat-form-field>
@@ -14,8 +16,12 @@
          [formControl]="passwordFC"
          placeholder="input password"
          required/>
+  <mat-hint>compatible password</mat-hint>
+  <mat-error>{{getPasswordError()}}</mat-error>
 </mat-form-field>
-  <button type="submit" mat-raised-button color="primary">Submit</button>
+  <button type="submit" mat-raised-button color="primary" *ngIf="signin">Login</button>
+  <button type="submit" mat-raised-button color="primary" *ngIf="!signin">Sing up</button>
   <button type="reset" mat-raised-button color="primary">Reset</button>
+  <button type="button" mat-raised-button color="primary" (click)="toggleSignin()">{{signin ? 'Register' : 'Login'}}</button>
 
 </form>

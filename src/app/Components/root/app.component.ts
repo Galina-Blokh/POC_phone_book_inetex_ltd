@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {DataExchangeService} from '../../Servises/data-exchange.service';
+import {DataExchangeService} from '../../Services/data-exchange.service';
 
 @Component({
   selector: 'app-root',

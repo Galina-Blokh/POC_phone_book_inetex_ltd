@@ -11,9 +11,11 @@ import { AppComponent } from './Components/root/app.component';
 import { AuthComponent } from './Components/auth/auth.component';
 import { PhoneBookComponent } from './Components/phone-book/phone-book.component';
 import { ContactComponent } from './Components/contact/contact.component';
-import {HttpService} from './Servises/http.service';
-import {DataExchangeService} from './Servises/data-exchange.service';
-import {UtilService} from './Servises/util.service';
+import {HttpService} from './Services/http.service';
+import {DataExchangeService} from './Services/data-exchange.service';
+import {UtilService} from './Services/util.service';
+import {PatternsService} from './Services/patterns.service';
+import {URLsService} from './Services/urls.service';
 
 
 
@@ -29,7 +31,7 @@ import {UtilService} from './Servises/util.service';
     MatCheckboxModule, HttpClientModule, MatDesignModule,
     FormsModule, ReactiveFormsModule
   ],
-  providers: [HttpService, DataExchangeService, UtilService],
+  providers: [HttpService, DataExchangeService, UtilService, PatternsService, URLsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
