@@ -1,2 +1,7 @@
-.mat-form-field {margin: 0 1vw}
-button{margin: 0 1vw}
+.formLog{right: 0; transform: scale(-1, 1)}
+.mat-form-field{ margin: 0 1vw; transform: scale(-1, 1)}
+button{margin: 0 1vw; min-width: 10%; transform: scale(-1, 1)}
+::ng-deep.snack{ background-color: red; color: white}
+::ng-deep.mat-simple-snackbar{ justify-content: center!important;}
+.phone{position: relative; top: 20px}
+.phone p{position: absolute; left: 50%; transform: translate(-50%, 0)}

@@ -1,27 +1,26 @@
-<form [formGroup]="authFG" (submit)="authSubmit()">
-
-<mat-form-field>
-  <mat-label>Login: </mat-label>
-  <input matInput
-         [formControl]="loginFC"
-         placeholder="input login"
-         required/>
-  <mat-hint>valid e-mail</mat-hint>
-  <mat-error>{{getLoginError()}}</mat-error>
-</mat-form-field>
-
-<mat-form-field>
-  <mat-label>Password: </mat-label>
-  <input matInput
-         [formControl]="passwordFC"
-         placeholder="input password"
-         required/>
-  <mat-hint>compatible password</mat-hint>
-  <mat-error>{{getPasswordError()}}</mat-error>
-</mat-form-field>
-  <button type="submit" mat-raised-button color="primary" *ngIf="signin">Login</button>
-  <button type="submit" mat-raised-button color="primary" *ngIf="!signin">Sing up</button>
-  <button type="reset" mat-raised-button color="primary">Reset</button>
-  <button type="button" mat-raised-button color="primary" (click)="toggleSignin()">{{signin ? 'Register' : 'Login'}}</button>
-
-</form>
+<div class="formLog">
+  <form [formGroup]="authFG" (submit)="authSubmit()">
+    <mat-form-field>
+      <mat-label>Login:</mat-label>
+      <input matInput required
+             [formControl]="loginFC"
+             placeholder="input login">
+      <mat-hint>valid email</mat-hint>
+      <mat-error>{{getLoginError()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password:</mat-label>
+      <input matInput required
+             [formControl]="passwordFC"
+             placeholder="input password">
+      <mat-error>{{getPasswordError()}}</mat-error>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" *ngIf="signin">Login</button>
+    <button type="submit" mat-raised-button color="primary" *ngIf="!signin">Sign up</button>
+    <button type="reset" mat-raised-button color="primary">Reset</button>
+    <button type="button" mat-raised-button color="primary" (click)="toggleSignin()">{{signin ? 'Register' : 'Login'}}</button>
+  </form>
+</div>
+<div class="phone">
+  <p><img mat-card-image src="../../../assets/imgpsh_fullsize_anim.png" height="250" width="250"/> </p>
+</div>

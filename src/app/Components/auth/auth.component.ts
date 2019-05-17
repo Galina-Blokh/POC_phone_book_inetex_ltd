@@ -47,12 +47,15 @@ export class AuthComponent implements OnInit {
     if (this.signin) {
       this.http.login(info).subscribe(
         (result) => {
-          console.log(result);
           localStorage.setItem('contacts', (result as any).token);
+          this.util.refresh();
           console.log(localStorage.getItem('contact'));
           DataExchangeService.setPage('phone-book');
         },
-        (error) => console.log(error)
+        (error) => {
+          console.log(error);
+          this.util.snack(error.error.message);
+        }
       )
     }
   }

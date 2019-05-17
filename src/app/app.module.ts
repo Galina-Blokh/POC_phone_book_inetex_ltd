@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {MatDesignModule} from './Modules/mat-design/mat-design.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material';
+import {MatCardModule, MatCheckboxModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -29,7 +29,7 @@ import {URLsService} from './Services/urls.service';
   imports: [
     BrowserModule, BrowserAnimationsModule, NoopAnimationsModule,
     MatCheckboxModule, HttpClientModule, MatDesignModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule, MatCardModule
   ],
   providers: [HttpService, DataExchangeService, UtilService, PatternsService, URLsService],
   bootstrap: [AppComponent]

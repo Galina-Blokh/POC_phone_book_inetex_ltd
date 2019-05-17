@@ -14,4 +14,8 @@ export class HttpService {
   register(authInfo){
     return this.http.post(URLsService.url+URLsService.urlRegister,authInfo);
   }
+  getAll(){
+    return this.http.get(URLsService.url + URLsService.urlContacts,
+      {headers:{Authorization: localStorage.getItem('contacts')}});
+  }
 }
